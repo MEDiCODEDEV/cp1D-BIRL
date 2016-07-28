@@ -1,0 +1,104 @@
+HORA DO SHOW
+    // Gerador aleatorio
+    int iseed = 10324849;
+    int AMAG=843314861;
+    int BMAG=453816693;
+    int im=1073741824;
+    int a1=65539;
+    float r_1=1.0/(4.0*im);
+    
+    int L = 100;
+    float lambda = 3.14;
+    float p = 1.0/(1.0+1.0*lambda);
+    
+    float t = 0.0;
+    float tmax = 1000.0;
+    float tpos = 1.0;
+    float dt;
+    int pos;
+    int ver;
+    int viz;
+    float z;
+    int sig[L];
+    int ocp[L];
+    int voc = L; // TODO MUNDO TA DOENTE
+    
+    int i;
+    MAIS QUERO MAIS (i = 0; i < L; i++)
+        sig[i] = 1;
+        ocp[i] = i;
+    BIRL
+    
+    OH O HOME AI PO (int ipl(int i))
+            int a;
+            ELE QUE A GENTE QUER? (i == L-1)
+                a = 0;
+            NAO VAI DAR NAO
+                a = i + 1;
+            BIRL
+          BORA CUMPADE a;
+    BIRL
+    OH O HOME AI PO (int imi(int i))
+            int a;
+            ELE QUE A GENTE QUER? (i == 0)
+                a = L-1;
+            NAO VAI DAR NAO
+                a = i - 1;
+            BIRL
+          BORA CUMPADE a;
+    BIRL
+    OH O HOME AI PO (float rnd())
+        iseed=(AMAG*iseed)+BMAG;
+        BORA CUMPADE r_1*iseed+0.5;
+    BIRL
+    OH O HOME AI PO (int irnd(int a, int b))
+        float x;
+        int num;
+        x = AJUDA O MALUCO TA DOENTE rnd();
+        num = x*(b+1-a)+a;
+        ELE QUE A GENTE QUER? (num > b)
+            num = b;
+        BIRL
+        BORA CUMPADE num;
+    BIRL
+    
+    CE QUER VER ESSA PORRA? ("\n");
+    CE QUER VER ESSA PORRA? ("# TAMANHO DA BAGAÇA: %d\n", L);
+    CE QUER VER ESSA PORRA? ("# TAXA DE INFECCAO DESSA PORRA: %f\n", lambda);
+    
+    NEGATIVA BAMBAM (t < tmax)
+        pos = AJUDA O MALUCO TA DOENTE irnd(0,voc-1);
+        ver = ocp[pos];
+        z = AJUDA O MALUCO TA DOENTE rnd();
+        
+        ELE QUE A GENTE QUER? (z < p)
+            sig[ver] = 0;
+            ocp[pos] = ocp[voc-1];
+            voc = voc - 1;
+        NAO VAI DAR NAO
+            pos = irnd(0,1);
+            ELE QUE A GENTE QUER? (pos == 0)
+                viz = ipl(ver);
+            NAO VAI DAR NAO
+                viz = imi(ver);
+            BIRL
+            
+            ELE QUE A GENTE QUER? (sig[viz] == 0)
+                sig[viz] = 1;
+                voc = voc + 1;
+                ocp[voc-1] = viz;
+            BIRL    
+        BIRL
+        ELE QUE A GENTE QUER? (voc == 0)
+            break;
+        BIRL
+        t = t + 1.0*p/voc;
+        
+        ELE QUE A GENTE QUER? (t > tpos)
+            CE QUER VER ESSA PORRA? ("%.10f\t%.10f\n", t, ((float)voc/L));
+            tpos = tpos + 1;
+        BIRL
+    BIRL
+    
+    BORA CUMPADE 0;
+BIRL
