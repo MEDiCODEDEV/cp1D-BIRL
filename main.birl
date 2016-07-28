@@ -7,7 +7,7 @@ HORA DO SHOW
     int a1=65539;
     float r_1=1.0/(4.0*im);
     
-    int L = 100;
+    int L = 1000;
     float lambda = 3.14;
     float p = 1.0/(1.0+1.0*lambda);
     
@@ -65,6 +65,7 @@ HORA DO SHOW
     CE QUER VER ESSA PORRA? ("\n");
     CE QUER VER ESSA PORRA? ("# TAMANHO DA BAGAÇA: %d\n", L);
     CE QUER VER ESSA PORRA? ("# TAXA DE INFECCAO DESSA PORRA: %f\n", lambda);
+    CE QUER VER ESSA PORRA? ("# TEMPO E FRACAO DE MALUCO DOENTE:\n");
     
     NEGATIVA BAMBAM (t < tmax)
         pos = AJUDA O MALUCO TA DOENTE irnd(0,voc-1);
