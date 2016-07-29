@@ -19,6 +19,8 @@ Exemplo de saída:
 8.0057401657 0.4199999869
 ```
 
+Gráfico para L = 1000 e lambda = 3.14: http://i.imgur.com/wbNLRZk.png
+
 Linguagem aprovada para uso científico.
 
 Referência: https://en.wikipedia.org/wiki/Contact_process_(mathematics)
