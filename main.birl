@@ -1,36 +1,36 @@
 HORA DO SHOW
     // Gerador aleatorio
-    int iseed = 10324849;
-    int AMAG=843314861;
-    int BMAG=453816693;
-    int im=1073741824;
-    int a1=65539;
-    float r_1=1.0/(4.0*im);
+    MONSTRO iseed = 10324849;
+    MONSTRO AMAG=843314861;
+    MONSTRO BMAG=453816693;
+    MONSTRO im=1073741824;
+    MONSTRO a1=65539;
+    TRAPEZIO r_1=1.0/(4.0*im);
     
-    int L = 1000;
-    float lambda = 3.14;
-    float p = 1.0/(1.0+1.0*lambda);
+    MONSTRO L = 1000;
+    TRAPEZIO lambda = 3.14;
+    TRAPEZIO p = 1.0/(1.0+1.0*lambda);
     
-    float t = 0.0;
-    float tmax = 1000.0;
-    float tpos = 1.0;
-    float dt;
-    int pos;
-    int ver;
-    int viz;
-    float z;
-    int sig[L];
-    int ocp[L];
-    int voc = L; // TODO MUNDO TA DOENTE
+    TRAPEZIO t = 0.0;
+    TRAPEZIO tmax = 1000.0;
+    TRAPEZIO tpos = 1.0;
+    TRAPEZIO dt;
+    MONSTRO pos;
+    MONSTRO ver;
+    MONSTRO viz;
+    TRAPEZIO z;
+    MONSTRO sig[L];
+    MONSTRO ocp[L];
+    MONSTRO voc = L; // TODO MUNDO TA DOENTE
     
-    int i;
+    MONSTRO i;
     MAIS QUERO MAIS (i = 0; i < L; i++)
         sig[i] = 1;
         ocp[i] = i;
     BIRL
     
-    OH O HOME AI PO (int ipl(int i))
-            int a;
+    OH O HOME AI PO (MONSTRO ipl(MONSTRO i))
+            MONSTRO a;
             ELE QUE A GENTE QUER? (i == L-1)
                 a = 0;
             NAO VAI DAR NAO
@@ -38,8 +38,8 @@ HORA DO SHOW
             BIRL
           BORA CUMPADE a;
     BIRL
-    OH O HOME AI PO (int imi(int i))
-            int a;
+    OH O HOME AI PO (MONSTRO imi(MONSTRO i))
+            MONSTRO a;
             ELE QUE A GENTE QUER? (i == 0)
                 a = L-1;
             NAO VAI DAR NAO
@@ -47,13 +47,13 @@ HORA DO SHOW
             BIRL
           BORA CUMPADE a;
     BIRL
-    OH O HOME AI PO (float rnd())
+    OH O HOME AI PO (TRAPEZIO rnd())
         iseed=(AMAG*iseed)+BMAG;
         BORA CUMPADE r_1*iseed+0.5;
     BIRL
-    OH O HOME AI PO (int irnd(int a, int b))
-        float x;
-        int num;
+    OH O HOME AI PO (MONSTRO irnd(MONSTRO a, MONSTRO b))
+        TRAPEZIO x;
+        MONSTRO num;
         x = AJUDA O MALUCO TA DOENTE rnd();
         num = x*(b+1-a)+a;
         ELE QUE A GENTE QUER? (num > b)
